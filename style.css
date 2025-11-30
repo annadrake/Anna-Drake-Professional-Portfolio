@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+  font-family: "Cormorant Infant", "Georgia", serif;
+  color: #323232;
+  background-color: #F5F1EB;
+  font-size: 18px;
+}
+
+.site-header {
+  background-color: #1F2A44;
+  color: #F5F1EB;
+  padding: 1.2rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.site-title h1 {
+  margin: 0;
+  font-family: "Cormorant SC", "Cormorant Garamond", serif;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.nav a {
+  color: #F5F1EB;
+  text-decoration: none;
+  margin-left: 1.2rem;
+  font-size: 0.78rem;
+  font-family: "Cormorant SC", serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2.2rem 10%;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 2.2rem;
+}
+
+.hero-soft {
+  background: linear-gradient(130deg, #FFF7F2, #F5F1EB);
+  padding: 2rem 2.2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.hero-text h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.1rem;
+  color: #1F2A44;
+  margin-top: 0;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-text p {
+  line-height: 1.8;
+  font-size: 1.02rem;
+}
+
+.hero-image {
+  flex: 1 1 260px;
+}
+
+.image-placeholder {
+  border: 2px dashed #C6A667;
+  padding: 2rem;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #4C2F47;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+}
+
+.image-placeholder.small {
+  padding: 1.2rem;
+}
+
+.image-placeholder span {
+  display: block;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.2rem;
+}
+
+.card {
+  flex: 1 1 250px;
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  font-family: "Cormorant Garamond", serif;
+  margin-top: 0;
+  color: #1F2A44;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1.0rem;
+}
+
+.card p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.accent-top {
+  border-top: 4px solid #C8A7A0;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 0.9rem;
+  padding: 0.55rem 1.3rem;
+  background-color: #C6A667;
+  color: #1F2A44;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  font-family: "Cormorant SC", serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: #b0904f;
+  color: #FDFDFD;
+}
+
+.section {
+  margin-bottom: 2.2rem;
+  background-color: #FFF7F2;
+  padding: 1.9rem 1.9rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.04);
+}
+
+.section-alt {
+  background-color: #F0E1DA;
+}
+
+.foreword-panel {
+  background-color: #F0E1DA;
+  border-left: 4px solid #C6A667;
+}
+
+.section h2, .section h3 {
+  font-family: "Cormorant Garamond", serif;
+  color: #1F2A44;
+}
+
+.section h2 {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+}
+
+.section h3 {
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-size: 0.98rem;
+}
+
+.section p, .section li {
+  line-height: 1.9;
+  font-size: 1.0rem;
+}
+
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.two-column > div {
+  flex: 1 1 260px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+
+.mob-images {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #1F2A44;
+  color: #F5F1EB;
+  font-size: 0.85rem;
+  margin-top: 2.2rem;
+  font-family: "Cormorant SC", serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1.6rem 6%;
+  }
+  .nav {
+    margin-top: 0.6rem;
+  }
+  .nav a {
+    display: inline-block;
+    margin: 0.25rem 0.75rem 0 0;
+  }
+  .hero-soft {
+    padding: 1.7rem 1.5rem;
+  }
+}

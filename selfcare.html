@@ -90,28 +90,58 @@
   </div>
 </section>
 
+<style>
+  .split-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .split-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .split-image img {
+    width: 85%;
+    max-width: 420px;
+    border-radius: 12px;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .split-section {
+      grid-template-columns: 1fr;
+    }
+
+    .split-image img {
+      width: 100%;
+    }
+  }
+</style>
+
 <section class="section section-alt">
   <h3>Integrative Health &amp; Yoga</h3>
-  <p>
-    My MA in Integrative Health &amp; Healing allowed me to explore natural and energy medicine, psycho-neuroimmunology, spirituality and
-    health, and a wide range of complementary approaches. These studies reinforced what I had already sensed in clinical work: that
-    meaning, connection, and embodiment are central to healing.
-  </p>
-  <p>
-    As a Registered Yoga Teacher trained in Germany, I use yoga as both personal practice and professional tool. My approach emphasizes
-    accessibility, nervous system regulation, and gentle movement. It is less about performance and more about returning to oneself
-    with kindness. The values that guide my practice—non-harm, balance, compassion—are the same values that guide my work with patients
-    and families.
-  </p>
-  <div class="photo-grid">
-    <div class="image-placeholder small">
-      Certification from my yoga teacher training in Germany, symbolizing my commitment to integrative mind–body wellness.
-      <span>(replace with images/yoga_certificate_germany.jpg)</span>
+
+  <div class="split-section">
+
+    <!-- IMAGE SIDE (LEFT) -->
+    <div class="split-image">
+      <img src="images/yoga_practice.jpg" alt="Personal yoga practice in Germany">
     </div>
-    <div class="image-placeholder small">
-      A moment from my personal yoga practice, emphasizing alignment, breath, and the slow, attentive movement that anchors my daily life.
-      <span>(replace with images/yoga_practice.jpg)</span>
+
+    <!-- TEXT SIDE (RIGHT) -->
+    <div>
+      <p>
+        My yoga training in Germany integrated physical and contemplative practice, including Hatha and Vinyasa movement, Pranayama breathwork, and Yoga Nidra, along with foundational study of the Upanishads and the Bhagavad Gita.
+      </p>
+
+      <p>
+        While living there, I also practiced alongside active-duty service members in trauma-informed yoga on post through the :contentReference[oaicite:0]{index=0}, emphasizing somatic work, body scanning, and interoceptive awareness for nervous system regulation.
+      </p>
     </div>
+
   </div>
 </section>
 

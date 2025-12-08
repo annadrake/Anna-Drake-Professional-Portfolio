@@ -146,32 +146,24 @@
 </section>
 
 <style>
-  .split-section {
+  .two-image-section {
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    align-items: center;
+    gap: 2rem;
   }
 
-  .split-image {
-    display: flex;
-    justify-content: center;
-  }
-
-  .split-image img {
-    width: 85%;
+  .two-image-section img {
+    width: 100%;
     max-width: 420px;
     border-radius: 12px;
+    object-fit: cover;
   }
 
   /* Mobile */
   @media (max-width: 768px) {
-    .split-section {
+    .two-image-section {
       grid-template-columns: 1fr;
-    }
-
-    .split-image img {
-      width: 100%;
     }
   }
 </style>
@@ -179,20 +171,15 @@
 <section class="section">
   <h3>Healing Practices I Return To</h3>
 
-  <div class="split-section">
+  <!-- TEXT ACROSS THE TOP -->
+  <p>
+    Alongside yoga and contemplative practice, I trained in the NADA 5-Point Protocol at the Yale New Haven Hospital SATU treatment center through the National Acupuncture Detoxification Association (NADA). This ear acupuncture protocol is used to support stress regulation, trauma recovery, addiction, sleep, and emotional balance, and remains one of the grounding practices I return to for nervous system regulation and emotional steadiness.
+  </p>
 
-    <!-- TEXT SIDE (LEFT) -->
-    <div>
-      <p>
-        Alongside yoga and contemplative practice, I trained in the NADA 5-Point Protocol at the Yale New Haven Hospital SATU treatment center through the National Acupuncture Detoxification Association (NADA). This ear acupuncture protocol is used to support stress regulation, trauma recovery, addiction, sleep, and emotional balance, and remains one of the grounding practices I return to for nervous system regulation and emotional steadiness.
-      </p>
-    </div>
-
-    <!-- IMAGE SIDE (RIGHT) -->
-    <div class="split-image">
-      <img src="images/nada_5_point.jpg" alt="NADA 5-Point Protocol auricular acupuncture points">
-    </div>
-
+  <!-- TWO EQUAL IMAGES UNDERNEATH -->
+  <div class="two-image-section">
+    <img src="images/person_getting_nada.jpg" alt="Person receiving NADA 5-Point Protocol ear acupuncture">
+    <img src="images/person_getting_nada.jpg" alt="NADA 5-Point Protocol session in a calming setting">
   </div>
 </section>
 <section class="section">

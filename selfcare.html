@@ -149,38 +149,19 @@
   .two-image-section {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-  }
-
-  .two-image-section img {
-    width: 100%;
-    max-width: 420px;
-    border-radius: 12px;
-    object-fit: cover;
-  }
-
-  /* Mobile */
-  @media (max-width: 768px) {
-    .two-image-section {
-      grid-template-columns: 1fr;
-    }
-  }
-<style>
-  .two-image-section {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    justify-items: center;
     align-items: center;
   }
 
   .two-image-section img {
     width: 100%;
-    max-width: 420px;
-    height: 280px;          /* Forces equal visual height */
-    border-radius: 12px;
-    object-fit: cover;     /* Crops cleanly without distortion */
+    max-width: 360px;     /* prevents fuzzy upscaling */
+    height: 240px;        /* forces perfect match */
+    border-radius: 14px;
+    object-fit: cover;
+    display: block;
   }
 
   /* Mobile */
@@ -190,6 +171,7 @@
     }
 
     .two-image-section img {
+      max-width: 90%;
       height: auto;
     }
   }
@@ -198,15 +180,13 @@
 <section class="section">
   <h3>Healing Practices I Return To</h3>
 
-  <!-- TEXT ACROSS THE TOP -->
   <p>
     Alongside yoga and contemplative practice, I trained in the NADA 5-Point Protocol at the Yale New Haven Hospital SATU treatment center through the National Acupuncture Detoxification Association (NADA). This ear acupuncture protocol is used to support stress regulation, trauma recovery, addiction, sleep, and emotional balance, and remains one of the grounding practices I return to for nervous system regulation and emotional steadiness.
   </p>
 
-  <!-- TWO EQUAL IMAGES UNDERNEATH -->
   <div class="two-image-section">
     <img src="images/person_getting_nada.jpg" alt="Person receiving NADA 5-Point Protocol ear acupuncture">
-    <img src="images/nada_5_point.jpg" alt="NADA 5-Point Protocol auricular acupuncture points">
+    <img src="images/nada_5_point.jpg" alt="NADA 5-Point Protocol auricular acupuncture layout">
   </div>
 </section>
 <section class="section">

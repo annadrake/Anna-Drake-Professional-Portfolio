@@ -145,29 +145,56 @@
   </div>
 </section>
 
+<style>
+  .split-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .split-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .split-image img {
+    width: 85%;
+    max-width: 420px;
+    border-radius: 12px;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .split-section {
+      grid-template-columns: 1fr;
+    }
+
+    .split-image img {
+      width: 100%;
+    }
+  }
+</style>
+
 <section class="section">
-  <h3>Graduate Study in Integrative Health</h3>
-  <p>
-    At The Graduate Institute in Bethany, Connecticut (now closed), I completed coursework that explored holistic health, spirituality,
-    Indigenous healing traditions, and the mind–body–spirit connection. These studies continue to inform how I think about resilience,
-    burnout, and sustainable practice, both for patients and for those who care for them.
-  </p>
-  <div class="photo-grid">
-    <div class="image-placeholder small">
-      Coursework from my MA in Integrative Health &amp; Healing, spanning energy medicine, spirituality, and holistic approaches to wellness.
-      <span>(replace with images/ma_integrative_courses.png)</span>
+  <h3>Healing Practices I Return To</h3>
+
+  <div class="split-section">
+
+    <!-- TEXT SIDE (LEFT) -->
+    <div>
+      <p>
+        Alongside yoga and contemplative practice, I trained in the NADA 5-Point Protocol at the Yale New Haven Hospital SATU treatment center through the National Acupuncture Detoxification Association (NADA). This ear acupuncture protocol is used to support stress regulation, trauma recovery, addiction, sleep, and emotional balance, and remains one of the grounding practices I return to for nervous system regulation and emotional steadiness.
+      </p>
     </div>
-    <div class="image-placeholder small">
-      A ceremonial altar in Peru’s Sacred Valley, created as part of a despacho ritual honoring balance, reciprocity, and connection to the natural world.
-      <span>(replace with images/peru_ceremony_table.jpg)</span>
+
+    <!-- IMAGE SIDE (RIGHT) -->
+    <div class="split-image">
+      <img src="images/nada_5_point.jpg" alt="NADA 5-Point Protocol auricular acupuncture points">
     </div>
-    <div class="image-placeholder small">
-      A sweeping view of the Sacred Valley—a landscape shaped by Indigenous wisdom and sacred traditions that informed my holistic lens.
-      <span>(replace with images/peru_sacred_valley.jpg)</span>
-    </div>
+
   </div>
 </section>
-
 <section class="section">
   <h3>Everyday Practices That Sustain Me</h3>
   <p>

@@ -166,6 +166,33 @@
       grid-template-columns: 1fr;
     }
   }
+<style>
+  .two-image-section {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .two-image-section img {
+    width: 100%;
+    max-width: 420px;
+    height: 280px;          /* Forces equal visual height */
+    border-radius: 12px;
+    object-fit: cover;     /* Crops cleanly without distortion */
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .two-image-section {
+      grid-template-columns: 1fr;
+    }
+
+    .two-image-section img {
+      height: auto;
+    }
+  }
 </style>
 
 <section class="section">
@@ -179,7 +206,7 @@
   <!-- TWO EQUAL IMAGES UNDERNEATH -->
   <div class="two-image-section">
     <img src="images/person_getting_nada.jpg" alt="Person receiving NADA 5-Point Protocol ear acupuncture">
-    <img src="images/person_getting_nada.jpg" alt="NADA 5-Point Protocol session in a calming setting">
+    <img src="images/nada_5_point.jpg" alt="NADA 5-Point Protocol auricular acupuncture points">
   </div>
 </section>
 <section class="section">

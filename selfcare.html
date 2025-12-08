@@ -156,13 +156,13 @@
   }
 
   .two-image-section img {
-    width: 100%;
-    max-width: 360px;     /* prevents fuzzy upscaling */
-    height: 240px;        /* forces perfect match */
-    border-radius: 14px;
-    object-fit: cover;
-    display: block;
-  }
+  width: 100%;
+  max-width: 280px;   /* prevents blur */
+  height: auto;      /* keeps image crisp */
+  border-radius: 14px;
+  object-fit: contain;  /* prevents distortion */
+  display: block;
+}
 
   /* Mobile */
   @media (max-width: 768px) {

@@ -218,10 +218,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
-    align-items: center;
+    align-items: flex-start;  /* text starts at the top */
   ">
     <!-- TEXT COLUMN -->
-    <div style="flex: 3 1 320px; min-width: 280px;">
+    <div style="flex: 3 1 360px; min-width: 280px;">
       <p>
         I envision MOB Family as a platform where innovative ideas can be piloted, evaluated, and humanized, in particular, with the development
         of a comprehensive model of postpartum support that extends into the fourth trimester. This model honors cultural wisdom while upholding
@@ -231,11 +231,16 @@
     </div>
 
     <!-- IMAGE COLUMN -->
-    <div style="flex: 2 1 260px; min-width: 230px;">
+    <div style="
+      flex: 1 1 240px;
+      min-width: 220px;
+      display: flex;
+      justify-content: flex-end;
+    ">
       <div style="
+        max-width: 260px;   /* smaller, more proportional */
         border-radius: 16px;
         overflow: hidden;
-        max-width: 100%;
       ">
         <img
           src="images/tricare_overseas_care.jpg"

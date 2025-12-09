@@ -290,3 +290,50 @@ main {
   object-fit: contain;   /* shows entire image */
   background-color: #f3efe9; /* soft neutral fill if needed */
 }
+
+/* ===== GLOBAL IMPRINT – SHOW FULL IMAGES, NO CROPPING ===== */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.photo-grid figure {
+  margin: 0;
+  text-align: center;
+  height: auto;
+  overflow: visible;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  object-fit: contain;
+  aspect-ratio: auto;
+}
+
+/* graduation photo – extra safety to ensure no crop at all */
+.graduation-full {
+  object-fit: contain !important;
+  aspect-ratio: auto !important;
+}
+
+/* caption styling */
+.photo-grid figcaption {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 8px;
+  color: #444;
+}
+
+/* mobile stacking */
+@media (max-width: 900px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}

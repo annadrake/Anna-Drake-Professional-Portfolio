@@ -534,3 +534,7 @@ main {
     height: auto;
   }
 }
+
+.graduation-photo {
+  object-position: 50% 20%;
+}

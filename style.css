@@ -393,3 +393,49 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================================
+   GLOBAL IMPRINT — EQUAL SIZE, FULL IMAGE
+   ========================================= */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.photo-grid figure {
+  margin: 0;
+  text-align: center;
+}
+
+/* This creates identical image frames */
+.photo-grid figure img {
+  width: 100%;
+  height: 420px;              /* UNIFORM HEIGHT */
+  object-fit: contain;       /* SHOW FULL IMAGE */
+  background-color: #f3efe9; /* soft neutral fill */
+  border-radius: 8px;
+  display: block;
+}
+
+/* captions */
+.photo-grid figcaption {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 10px;
+  color: #444;
+}
+
+/* mobile stacking */
+@media (max-width: 900px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-grid figure img {
+    height: auto;
+  }
+}

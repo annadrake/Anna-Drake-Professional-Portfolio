@@ -278,3 +278,8 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+/* Fix graduation photo crop so head is not cut off */
+.graduation-fix {
+  object-position: top;
+}

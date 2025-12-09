@@ -283,3 +283,10 @@ main {
 .graduation-fix {
   object-position: top;
 }
+
+/* Show full graduation photo without cropping */
+.graduation-full {
+  aspect-ratio: auto;     /* removes forced crop */
+  object-fit: contain;   /* shows entire image */
+  background-color: #f3efe9; /* soft neutral fill if needed */
+}

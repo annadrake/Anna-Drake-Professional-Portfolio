@@ -873,3 +873,36 @@ main {
   display: block;
   background-color: #f7f3ea;  /* or your light background */
 }
+
+/* ================================
+   ABOUT PAGE — FORCE 4-IMAGE ROWS
+   ================================ */
+
+.about-page .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* forces 4 across */
+  gap: 28px;
+}
+
+/* Keep images clean and proportional */
+.about-page .photo-grid img,
+.about-page .photo-grid video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Tablet: 2 across */
+@media (max-width: 1200px) {
+  .about-page .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phone: 1 across */
+@media (max-width: 700px) {
+  .about-page .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}

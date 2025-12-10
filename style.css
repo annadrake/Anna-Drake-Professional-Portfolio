@@ -789,3 +789,24 @@ main {
   max-height: 520px;
   background-color: #f2e1d7; /* matches your pink tone */
 }
+
+/* =========================================
+   GLOBAL IMPRINT (HOME PAGE) IMAGE RESET
+   ========================================= */
+
+.global-imprint .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* For this section only: show full images, no hard cropping */
+.global-imprint .photo-grid img {
+  width: 100%;
+  height: auto;              /* no forced height = no zoom-in */
+  max-height: 520px;         /* keeps them from getting too tall */
+  object-fit: contain;       /* show the whole photo */
+  border-radius: 12px;
+  display: block;
+  background-color: #f2e1d7; /* matches your pink panel, fills any tiny gaps */
+}

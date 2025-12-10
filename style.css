@@ -749,3 +749,34 @@ main {
     height: auto !important;
   }
 }
+
+/* =========================================
+   GLOBAL IMPRINT — SLIGHT ZOOM OUT FIX
+   ========================================= */
+
+.photo-grid img {
+  width: 100% !important;
+  height: 520px !important;      /* was 480px — gives vertical breathing room */
+  object-fit: cover !important;
+  object-position: center 30%;  /* zooms OUT slightly (shows more above + below) */
+  border-radius: 12px;
+  display: block;
+}
+
+/* Ghana: zoom out a touch more */
+.ghana-photo {
+  object-position: 50% 32% !important;
+}
+
+/* Graduation: protect YOUR head + your daughter’s face */
+.graduation-photo {
+  object-position: 50% 30% !important;
+}
+
+/* Mobile safety */
+@media (max-width: 900px) {
+  .photo-grid img {
+    height: auto !important;
+    object-position: center !important;
+  }
+}

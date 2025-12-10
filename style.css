@@ -560,7 +560,7 @@ main {
 .photo-grid img {
   width: 100%;
   height: 420px;          /* uniform frame */
-  object-fit: cover;     /* fills evenly */
+  object-fit: cover;      /* fills evenly */
   object-position: center;
   border-radius: 12px;
   display: block;

@@ -692,3 +692,60 @@ main {
     height: auto !important;
   }
 }
+
+/* =========================================
+   GLOBAL IMPRINT — EQUAL SIZE, SMART CROP
+   ========================================= */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.photo-grid figure {
+  margin: 0;
+  text-align: center;
+}
+
+/* base: all three same size */
+.photo-grid img {
+  width: 100% !important;
+  height: 480px !important;          /* a bit taller to show more of each image */
+  object-fit: cover !important;
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Ghana – bias slightly down so her head + torso are centered */
+.ghana-photo {
+  object-position: 50% 40% !important;
+}
+
+/* Graduation – bias down so your daughter’s head + mid-body show,
+   while keeping your head in frame */
+.graduation-photo {
+  object-position: 50% 35% !important;
+}
+
+/* captions */
+.photo-grid figcaption {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 10px;
+  color: #444;
+}
+
+/* Mobile stacking */
+@media (max-width: 900px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-grid img {
+    height: auto !important;
+  }
+}

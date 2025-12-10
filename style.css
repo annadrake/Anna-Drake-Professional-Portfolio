@@ -780,3 +780,12 @@ main {
     object-position: center !important;
   }
 }
+
+/* ✅ GLOBAL ZOOM-OUT FIX — SHOW FULL IMAGE */
+.photo-grid img,
+.section img {
+  object-fit: contain !important;
+  height: auto !important;
+  max-height: 520px;
+  background-color: #f2e1d7; /* matches your pink tone */
+}

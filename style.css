@@ -831,3 +831,45 @@ main {
   display: block;
   background-color: #f2e1d7; /* your pink background fills any edge gaps */
 }
+
+/* =========================================
+   HOME PAGE – GLOBAL IMPRINT IMAGE RESET
+   ========================================= */
+
+.global-imprint .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Only Global Imprint images */
+.global-imprint .photo-grid img {
+  width: 100% !important;
+  height: auto !important;           /* stop forced crop */
+  max-height: 520px !important;
+  object-fit: contain !important;    /* show entire photo */
+  border-radius: 12px;
+  display: block;
+  background-color: #f2e1d7;         /* blends with panel */
+}
+
+/* =========================================
+   MOB FAMILY – GERMANY CLASSROOM RESET
+   ========================================= */
+
+.mob-germany .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Only the three Germany classroom photos */
+.mob-germany .photo-grid img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 420px !important;
+  object-fit: contain !important;
+  border-radius: 12px;
+  display: block;
+  background-color: #f7f3ea;  /* or your light background */
+}

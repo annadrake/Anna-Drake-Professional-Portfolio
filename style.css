@@ -590,3 +590,54 @@ main {
     height: auto;
   }
 }
+
+/* =========================================
+   GLOBAL IMPRINT — EQUAL SIZE GRID
+   ========================================= */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.photo-grid figure {
+  margin: 0;
+  text-align: center;
+}
+
+/* FORCE ALL IMAGES TO SAME SIZE */
+.photo-grid img {
+  width: 100% !important;
+  height: 420px !important;        /* uniform frame */
+  object-fit: cover !important;    /* fill evenly */
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+}
+
+/* ✅ SPECIAL PROTECTION: You + your daughter */
+.graduation-photo {
+  object-position: 50% 20% !important;  /* keeps your face + daughter's head/mid-body */
+}
+
+/* captions */
+.photo-grid figcaption {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 10px;
+  color: #444;
+}
+
+/* Mobile stacking */
+@media (max-width: 900px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-grid img {
+    height: auto !important;
+  }
+}

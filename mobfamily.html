@@ -31,21 +31,21 @@
   <h2>Military Overseas Birth &amp; Family Center, a 501(c)(3) Nonprofit Organization</h2>
 
   <div style="
-  max-width: 1100px;
-  margin: 0;                 /* ✅ removes centering */
-  padding-left: 16px;        /* ✅ aligns under heading */
-  display: grid;
-  grid-template-columns: 400px 1fr;
-  column-gap: 48px;
-  align-items: center;
-">
+    max-width: 1100px;
+    margin: 0;
+    padding-left: 16px;
+    display: grid;
+    grid-template-columns: 320px 1fr;   /* ⬅ reduced column width */
+    column-gap: 48px;
+    align-items: center;
+  ">
 
     <!-- LOGO / BANNER COLUMN -->
     <div style="
       border-radius: 16px;
       overflow: hidden;
       display: flex;
-      justify-content: flex-start;   /* ✅ aligns banner to left edge */
+      justify-content: flex-start;
       align-items: center;
     ">
       <img 
@@ -53,13 +53,14 @@
         alt="Military Overseas Birth &amp; Family Center logo"
         style="
           width: 100%;
-          max-width: 480px;     /* ✅ slightly larger for better visual weight */
+          max-width: 300px;   /* ⬅ reduced from 480px → crisp + proportional */
           height: auto;
           display: block;
+          image-rendering: crisp-edges;  /* ⬅ sharper logo */
         "
       >
     </div>
-
+    
     <!-- TEXT COLUMN -->
     <div>
       <p>

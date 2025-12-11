@@ -185,43 +185,52 @@
   </p>
 
   <div class="healing-images" style="
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  ">
+  margin-top: 32px;
+  display: flex;
+  gap: 60px;
+  justify-content: center;   /* ⬅ centers both images together */
+  align-items: flex-start;
+  flex-wrap: wrap;
+">
 
-    <!-- LEFT IMAGE -->
+  <!-- LEFT IMAGE (LARGER + CRISP) -->
+  <div style="
+    max-width: 440px;         /* ⬅ bigger but still sharp */
+    border-radius: 20px;
+    overflow: hidden;
+  ">
     <img
       src="images/person_getting_nada.jpg"
       alt="Auricular acupuncture being administered"
       style="
         width: 100%;
-        max-width: 380px;
         height: auto;
-        border-radius: 18px;
-        object-fit: cover;
         display: block;
+        object-fit: cover;
       "
     >
+  </div>
 
-    <!-- RIGHT IMAGE -->
+  <!-- RIGHT IMAGE -->
+  <div style="
+    max-width: 380px;
+    border-radius: 20px;
+    overflow: hidden;
+  ">
     <img
       src="images/nada_5_point.jpg"
       alt="NADA 5-Point Protocol auricular acupuncture layout"
       style="
         width: 100%;
-        max-width: 380px;
         height: auto;
-        border-radius: 18px;
-        object-fit: contain;
         display: block;
+        object-fit: contain;
         background: #fff;
       "
     >
-
   </div>
+
+</div>
 </section>
 
 <section class="section">

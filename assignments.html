@@ -139,39 +139,39 @@
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
     ">
 
-      <!-- GOLD PLAY OVERLAY -->
-      <div id="play-overlay" style="
-        position: absolute;
-        top: 0; left: 0; 
-        width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.25);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: opacity 0.4s ease;
-        z-index: 10;
-      ">
-        <div style="
-          width: 90px;
-          height: 90px;
-          background: #c0a168; /* gold */
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        ">
-          <div style="
-            margin-left: 6px; /* centers triangle inside circle */
-            width: 0; 
-            height: 0; 
-            border-top: 18px solid transparent;
-            border-bottom: 18px solid transparent;
-            border-left: 28px solid white;
-          "></div>
-        </div>
-      </div>
+      <!-- PLAY OVERLAY -->
+<div id="play-overlay" style="
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+  z-index: 10;
+">
+  <div style="
+    width: 90px;
+    height: 90px;
+    background: #2b2420; /* deep espresso, matches your palette */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  ">
+    <div style="
+      margin-left: 6px;
+      width: 0; 
+      height: 0; 
+      border-top: 18px solid transparent;
+      border-bottom: 18px solid transparent;
+      border-left: 28px solid #c0a168; /* GOLD triangle matches your buttons */
+    "></div>
+  </div>
+</div>
 
       <!-- Google Drive iframe -->
       <iframe

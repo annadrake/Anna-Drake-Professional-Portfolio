@@ -193,10 +193,30 @@
   flex-wrap: wrap;
 ">
 
-  <!-- LEFT IMAGE (cropped to fit) -->
+  <!-- EAR IMAGE FIRST (slightly smaller, crisp, proportional) -->
   <div style="
     width: 360px;
-    height: 480px;        /* ⬅ both images same height */
+    height: 240px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #ffffff;
+  ">
+    <img
+      src="images/nada_ear.jpg"  <!-- use your actual ear image filename here -->
+      alt="Auricular acupuncture ear points"
+      style="
+        width: 100%;
+        height: 100%;
+        object-fit: contain;   /* keep full ear visible and readable */
+        display: block;
+      "
+    >
+  </div>
+
+  <!-- NADA SESSION IMAGE SECOND (same card size) -->
+  <div style="
+    width: 360px;
+    height: 240px;
     border-radius: 20px;
     overflow: hidden;
   ">
@@ -206,27 +226,7 @@
       style="
         width: 100%;
         height: 100%;
-        object-fit: cover;   /* ⬅ crops to fill box evenly */
-        display: block;
-      "
-    >
-  </div>
-
-  <!-- RIGHT IMAGE (full diagram preserved) -->
-  <div style="
-    width: 360px;
-    height: 480px;        /* ⬅ same box size */
-    border-radius: 20px;
-    overflow: hidden;
-    background: #ffffff;
-  ">
-    <img
-      src="images/nada_5_point.jpg"
-      alt="NADA 5-Point Protocol auricular acupuncture layout"
-      style="
-        width: 100%;
-        height: 100%;
-        object-fit: contain; /* ⬅ preserves full diagram */
+        object-fit: cover;     /* fills card nicely */
         display: block;
       "
     >

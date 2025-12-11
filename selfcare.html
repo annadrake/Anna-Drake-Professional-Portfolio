@@ -187,15 +187,16 @@
   <div class="healing-images" style="
   margin-top: 32px;
   display: flex;
-  gap: 48px;                /* slightly tighter gap */
-  justify-content: center;  /* center both images as a unit */
+  gap: 48px;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
 ">
 
-  <!-- LEFT IMAGE -->
+  <!-- LEFT IMAGE (cropped to fit) -->
   <div style="
-    max-width: 430px;       /* same width as ear image */
+    width: 360px;
+    height: 480px;        /* ⬅ both images same height */
     border-radius: 20px;
     overflow: hidden;
   ">
@@ -204,28 +205,29 @@
       alt="Auricular acupuncture being administered"
       style="
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;   /* ⬅ crops to fill box evenly */
         display: block;
-        object-fit: cover;
       "
     >
   </div>
 
-  <!-- RIGHT IMAGE -->
+  <!-- RIGHT IMAGE (full diagram preserved) -->
   <div style="
-    max-width: 430px;       /* match width to feel proportional */
+    width: 360px;
+    height: 480px;        /* ⬅ same box size */
     border-radius: 20px;
     overflow: hidden;
+    background: #ffffff;
   ">
     <img
       src="images/nada_5_point.jpg"
       alt="NADA 5-Point Protocol auricular acupuncture layout"
       style="
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: contain; /* ⬅ preserves full diagram */
         display: block;
-        object-fit: contain;
-        background: #fff;
       "
     >
   </div>

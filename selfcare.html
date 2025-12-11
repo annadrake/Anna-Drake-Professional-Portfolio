@@ -193,10 +193,10 @@
   flex-wrap: wrap;
 ">
 
-  <!-- EAR IMAGE FIRST (zoomed OUT, full diagram visible) -->
+  <!-- EAR IMAGE FIRST (WAY zoomed out) -->
 <div style="
   width: 360px;
-  height: 240px;
+  height: 420px;           /* <-- much taller for full diagram */
   border-radius: 20px;
   overflow: hidden;
   background: #ffffff;
@@ -205,17 +205,17 @@
   align-items: center;
 ">
   <img
-    src="images/nada_5_point.jpg"  /* <-- your correct filename */
+    src="images/nada_5_point.jpg"      /* <-- make sure filename matches */
     alt="Auricular acupuncture ear points"
     style="
       width: 100%;
       height: 100%;
-      object-fit: contain;    /* <-- THIS zooms OUT, shows entire ear */
+      object-fit: contain;             /* <-- shrinks image inside box */
+      object-position: center top;     /* <-- optional: keep top aligned */
       display: block;
     "
   >
 </div>
-
   <!-- NADA SESSION IMAGE SECOND (same card size) -->
   <div style="
     width: 360px;

@@ -140,43 +140,44 @@
     ">
 
       <!-- PLAY OVERLAY -->
-<div id="play-overlay" style="
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: opacity 0.4s ease;
-  z-index: 10;
-">
-  <div style="
-    width: 90px;
-    height: 90px;
-    background: #2b2420; /* deep espresso, matches your palette */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  ">
-    <div style="
-      margin-left: 6px;
-      width: 0; 
-      height: 0; 
-      border-top: 18px solid transparent;
-      border-bottom: 18px solid transparent;
-      border-left: 28px solid #c0a168; /* GOLD triangle matches your buttons */
-    "></div>
-  </div>
-</div>
+      <div id="play-overlay" style="
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: opacity 0.4s ease;
+        z-index: 10;
+      ">
+        <div style="
+          width: 90px;
+          height: 90px;
+          background: #2b2420;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        ">
+          <div style="
+            margin-left: 6px;
+            width: 0;
+            height: 0;
+            border-top: 18px solid transparent;
+            border-bottom: 18px solid transparent;
+            border-left: 28px solid #c0a168;
+          "></div>
+        </div>
+      </div>
 
       <!-- Google Drive iframe -->
       <iframe
         id="drive-video"
         src="https://drive.google.com/file/d/1BwPSROUH2OZiD52KPXhMmpkj6p8f1MPf/preview"
+        title="Expanding Equity for Military Families Overseas - video presentation"
         style="
           position: absolute;
           top: 0; left: 0;
@@ -186,6 +187,7 @@
         allow="autoplay; encrypted-media"
         allowfullscreen
       ></iframe>
+
     </div>
   </div>
 
@@ -193,7 +195,7 @@
   <p style="margin-top: 14px;">
     <a href="https://drive.google.com/file/d/1BwPSROUH2OZiD52KPXhMmpkj6p8f1MPf/view?usp=sharing"
        class="assignment-button"
-       target="_blank">
+       target="_blank" rel="noopener">
        Open in Fullscreen
     </a>
   </p>
@@ -201,7 +203,16 @@
   <!-- SCRIPT TO REMOVE OVERLAY ON CLICK -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-</main>
+      const overlay = document.getElementById("play-overlay");
+      if (!overlay) return;
+
+      overlay.addEventListener("click", function () {
+        overlay.style.opacity = "0";
+        overlay.style.pointerEvents = "none";
+      });
+    });
+  </script>
+</section>
 
 <footer class="site-footer">
   <p>© 2025 Anna Drake — Professional Practice Portfolio</p>

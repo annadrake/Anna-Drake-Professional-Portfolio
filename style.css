@@ -1041,3 +1041,24 @@ main {
 .photo-grid {
   align-items: start;
 }
+/* Outreach grid: prevent row-stretch and tighten caption spacing */
+.photo-grid { 
+  align-items: start !important;
+}
+
+.photo-card{
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 4px !important;      /* tighter: try 2px if you want it closer */
+}
+
+.photo-caption{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  width: 100% !important;
+  text-align: center !important;
+  line-height: 1.2 !important;
+}

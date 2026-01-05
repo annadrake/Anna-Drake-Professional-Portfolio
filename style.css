@@ -1062,3 +1062,21 @@ main {
   text-align: center !important;
   line-height: 1.2 !important;
 }
+/* FORCE captions to sit close to images */
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-caption {
+  margin-top: -8px;     /* <-- THIS is the key */
+  margin-bottom: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #555;
+  line-height: 1.25;
+}

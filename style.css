@@ -1037,3 +1037,7 @@ main {
   color: #555;
   line-height: 1.35;
 }
+/* Prevent grid items from stretching vertically */
+.photo-grid {
+  align-items: start;
+}

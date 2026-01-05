@@ -1006,3 +1006,16 @@ main {
   color: #555;
   line-height: 1.4;
 }
+/* Photo captions – Outreach page only */
+.photo-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-caption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #555;
+  line-height: 1.35;
+}

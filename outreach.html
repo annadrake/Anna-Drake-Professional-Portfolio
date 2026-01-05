@@ -11,16 +11,22 @@
 
   <!-- Minimal caption CSS (safe: does NOT touch image sizes) -->
   <style>
+    /* IMPORTANT: captions must be inside .photo-card (same grid cell as image) */
     .photo-card{
       display: flex;
       flex-direction: column;
+      align-items: center;
+      gap: 6px;              /* controls distance between image and caption */
     }
     .photo-caption{
-      margin-top: 8px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      text-align: center;
       font-size: 0.85rem;
       font-style: italic;
       color: #555;
-      line-height: 1.35;
+      line-height: 1.25;
     }
   </style>
 </head>
@@ -106,7 +112,7 @@
           "
         >
       </div>
-      <div class="photo-caption">Working the triage tent in a mountain village</div>
+      <div class="photo-caption">Entrance to the rural hospital</div>
     </div>
 
     <div class="photo-card">
@@ -128,7 +134,7 @@
           "
         >
       </div>
-      <div class="photo-caption">Following the cows back to base camp after a long day in the field</div>
+      <div class="photo-caption">Small clinic serving mountain communities</div>
     </div>
 
     <div class="photo-card">
@@ -150,7 +156,7 @@
           "
         >
       </div>
-      <div class="photo-caption">Preparing the pop-up pharmacy</div>
+      <div class="photo-caption">Mother–infant care in a rural ward</div>
     </div>
 
     <div class="photo-card">
@@ -172,7 +178,7 @@
           "
         >
       </div>
-      <div class="photo-caption">A rural community receiving primary care inside local church</div>
+      <div class="photo-caption">Mountain view from the hospital rooftop</div>
     </div>
 
   </div>
@@ -215,7 +221,7 @@
           "
         >
       </div>
-      <div class="photo-caption">Having fun with the kids</div>
+      <div class="photo-caption">Women’s teaching circle on maternal health</div>
     </div>
 
     <div class="photo-card">
@@ -237,7 +243,7 @@
           "
         >
       </div>
-      <div class="photo-caption">Facilitating local relationships</div>
+      <div class="photo-caption">Facilitating maternal health education</div>
     </div>
 
     <div class="photo-card">
@@ -325,7 +331,7 @@
           "
         >
       </div>
-      <div class="photo-caption">Shaman creating despacho altar for gratitude and reciprocity</div>
+      <div class="photo-caption">Panoramic view of Peru’s Sacred Valley</div>
     </div>
 
     <div class="photo-card">
@@ -347,7 +353,7 @@
           "
         >
       </div>
-      <div class="photo-caption">Receiving limpia by a local healer</div>
+      <div class="photo-caption">Despacho altar for gratitude and reciprocity</div>
     </div>
 
     <div class="photo-card">
@@ -391,7 +397,7 @@
           "
         >
       </div>
-      <div class="photo-caption">A Shaman's hands creating ceremonial offering to Pachamama</div>
+      <div class="photo-caption">Sacred archaeological landscape in the Andes</div>
     </div>
 
     <div class="photo-card">

@@ -11,24 +11,26 @@
 
   <!-- Minimal caption CSS (safe: does NOT touch image sizes) -->
   <style>
-    /* IMPORTANT: captions must be inside .photo-card (same grid cell as image) */
-    .photo-card{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;              /* controls distance between image and caption */
-    }
-    .photo-caption{
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      text-align: center;
-      font-size: 0.85rem;
-      font-style: italic;
-      color: #555;
-      line-height: 1.25;
-    }
-  </style>
+  /* Captions: tight + centered (applies to ALL photos on this page) */
+  .photo-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;                 /* was 6px; smaller = closer */
+  }
+
+  .photo-caption{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #555;
+    line-height: 1.15;
+    transform: translateY(-6px);  /* pulls caption UP closer to the photo */
+  }
+</style>
 </head>
 <body>
 <header class="site-header">

@@ -9,28 +9,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Cormorant+Infant:wght@300;400;500;600&family=Cormorant+SC&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Minimal caption CSS (safe: does NOT touch image sizes) -->
   <style>
-  /* Captions: tight + centered (applies to ALL photos on this page) */
-  .photo-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;                 /* was 6px; smaller = closer */
-  }
+    /* Make sure grid items don't stretch vertically (prevents odd extra space) */
+    .photo-grid{
+      align-items: start;
+    }
 
-  .photo-caption{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 0.85rem;
-    font-style: italic;
-    color: #555;
-    line-height: 1.15;
-    transform: translateY(-6px);  /* pulls caption UP closer to the photo */
-  }
-</style>
+    /* Captions: tight + centered (applies to ALL photos on this page) */
+    .photo-card{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;                 /* keep image + caption tight */
+    }
+
+    .photo-caption{
+      margin: 6px 0 0 0;      /* small, consistent space under photo */
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #555;
+      line-height: 1.15;
+    }
+  </style>
 </head>
 <body>
 <header class="site-header">
@@ -68,7 +71,8 @@
   <div class="photo-grid" style="
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 10px;
     max-width: 1400px;
     margin: 32px auto 0 auto;
   ">
@@ -177,7 +181,8 @@
   <div class="photo-grid" style="
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 10px;
     max-width: 1300px;
     margin: 32px auto 0 auto;
   ">
@@ -287,7 +292,8 @@
   <div class="photo-grid" style="
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    column-gap: 20px;
+    row-gap: 10px;
     max-width: 1400px;
     margin: 32px auto 0 auto;
   ">

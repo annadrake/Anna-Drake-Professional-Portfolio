@@ -9,25 +9,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Cormorant+Infant:wght@300;400;500;600&family=Cormorant+SC&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Caption + grid override: beats style.css and keeps captions attached to each photo -->
+  <!-- Caption + grid override: prevents captions from drifting away (even if style.css has conflicting rules) -->
   <style>
-    /* IMPORTANT: ensure each photo-card stays as ONE grid item (prevents captions becoming a separate grid row) */
+    /* Keep cards from stretching oddly inside grid rows */
     .photo-grid{
       align-items: start !important;
     }
 
+    /* Force each card to keep image + caption together at the top */
     .photo-grid > .photo-card{
-      display: flex !important;              /* defeats display:contents or similar */
+      display: flex !important;                 /* defeats display: contents */
       flex-direction: column !important;
       align-items: center !important;
-      gap: 6px !important;                   /* small space between photo and caption */
+
+      /* THIS is the key fix if your style.css is pushing captions away */
+      justify-content: flex-start !important;
+
+      gap: 6px !important;                      /* small space between photo and caption */
+      height: auto !important;
+      min-height: 0 !important;
+
       width: 100% !important;
       margin: 0 !important;
       padding: 0 !important;
     }
 
+    /* Make sure the photo wrapper itself has no sneaky margin */
+    .photo-grid > .photo-card > div:first-child{
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
     .photo-grid > .photo-card > .photo-caption{
-      margin: 0 !important;                  /* remove any inherited margins */
+      margin: 0 !important;
       padding: 0 !important;
       width: 100% !important;
       text-align: center !important;
@@ -35,7 +49,7 @@
       font-style: italic !important;
       color: #555 !important;
       line-height: 1.15 !important;
-      transform: none !important;            /* no lift tricks needed once grouped correctly */
+      transform: none !important;
     }
   </style>
 </head>
@@ -183,11 +197,12 @@
     This work required a culturally responsive approach that respected gender norms, acknowledged a blended landscape of spiritual and biomedical healthcare belief systems, and accounted for pervasive economic hardship. Because most families could not afford specialized foods or supplements, nutritional education was intentionally adapted to the local food system—ensuring that recommendations were both culturally grounded and economically attainable.
   </p>
 
+  <!-- OPTIONAL (recommended): match other grids so Ghana images don't look smaller -->
   <div class="photo-grid" style="
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    max-width: 1300px;
+    gap: 20px;
+    max-width: 1400px;
     margin: 32px auto 0 auto;
   ">
 

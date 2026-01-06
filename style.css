@@ -1080,3 +1080,33 @@ main {
   color: #555;
   line-height: 1.25;
 }
+/* ================================
+   OUTREACH — GHANA ROW ONLY FIX
+   ================================ */
+
+/* Ensure each Ghana tile keeps image + caption together */
+.ghana-grid > .photo-card{
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 4px !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Force the image to fill your 300px frame (prevents extra empty space) */
+.ghana-grid > .photo-card img{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Tighten caption spacing ONLY for Ghana */
+.ghana-grid > .photo-card > .photo-caption{
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  line-height: 1.15 !important;
+}
